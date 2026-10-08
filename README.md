@@ -23,10 +23,12 @@ Aplikasi ini hadir sebagai alat eksplorasi digital bagi para tamer untuk mengaks
 
 Dokumentasi visual antarmuka pengguna (*User Interface*) aplikasi:
 
-| Home Screen (Grid List) | Detail Screen (Informasi Lengkap) | Loading & Error State |
+| Home Screen (Grid List) | Detail Screen (Informasi Lengkap) 
 | :---: | :---: | :---: |
-| <img src="screenshots/home_screen.png" width="260" alt="Home Screen"/> | <img src="screenshots/detail_screen.png" width="260" alt="Detail Screen"/> | <img src="screenshots/state_screen.png" width="260" alt="State Handling"/> |
-| Katalog Digimon dalam format 2 kolom responsif | Detail lengkap: Level, Type, Atribut, dan Gambar | Penanganan status `Loading` dan `Error` secara reaktif |
+| <img width="710" height="1601" alt="Home_Screen" src="https://github.com/user-attachments/assets/6e80a694-9c22-406e-85b4-c782b5e70973" />
+ | <img width="710" height="1601" alt="Digimon_Detail" src="https://github.com/user-attachments/assets/625dfa15-3195-430a-8b26-9e0a034fa35f" />
+
+| Katalog Digimon dalam format 2 kolom responsif | Detail lengkap: Level, Type, Atribut, dan Gambar |
 
 ---
 
