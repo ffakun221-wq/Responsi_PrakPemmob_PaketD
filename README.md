@@ -221,29 +221,9 @@ AplikasiEksplorasiDigimon/
 
 ---
 
-## 🎙️ 6. Panduan Video Penjelasan Kode (Outline Walkthrough)
 
-Sesuai ketentuan **Poin 4.3** (*"Video penjelasan kode, bukan demo aplikasi"*), berikut adalah urutan materi yang disarankan saat merekam video penjelasan kode:
 
-1. **Pengantar & Arsitektur (± 1 Menit)**:
-   - Jelaskan pola arsitektur **MVVM** yang memisahkan View, ViewModel, Repository, dan Model.
-2. **Data & Networking Layer (± 2 Menit)**:
-   - Buka [`Models.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/Models.kt): jelaskan pemanfaatan **Data Class** dan **Null Safety**.
-   - Buka [`DigimonApiService.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/DigimonApiService.kt) & [`RetrofitClient.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/RetrofitClient.kt): jelaskan endpoint Retrofit dan fungsi `suspend`.
-   - Buka [`DigimonRepository.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/DigimonRepository.kt): jelaskan peran repository sebagai jembatan data.
-3. **ViewModel & State Management (± 2 Menit)**:
-   - Buka [`UiState.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/UiState.kt): jelaskan implementasi sealed class (`Loading`, `Success`, `Error`).
-   - Buka [`DigimonViewModel.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/DigimonViewModel.kt): jelaskan eksekusi asynchronous via `viewModelScope.launch`, enkapsulasi `MutableStateFlow` ke `StateFlow`, dan pemanggilan data.
-4. **UI Layer & Jetpack Compose (± 3 Menit)**:
-   - Buka [`Theme.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/theme/Theme.kt) & [`Type.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/theme/Type.kt): jelaskan konfigurasi **Material 3 Custom Theme** dan **Custom Typography Serif**.
-   - Buka [`HomeScreen.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/HomeScreen.kt): jelaskan observasi state menggunakan `collectAsState()`, percabangan UI (`when(state)`), dan penggunaan **`LazyVerticalGrid`**.
-   - Buka [`DetailScreen.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/ui/DetailScreen.kt): jelaskan `LaunchedEffect(id)`, **`LazyColumn`**, pemuatan gambar dengan **Coil `AsyncImage`**, serta rendering 4 data wajib (Nama, Level, Type, Attribute).
-5. **Navigation (± 1 Menit)**:
-   - Buka [`MainActivity.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/MainActivity.kt): jelaskan konfigurasi `NavHost`, 2 screen (Home dan Detail), dan pengiriman parameter ID antar halaman.
-
----
-
-## 📋 7. Checklist Pemenuhan Kriteria Responsi
+## 📋 6. Checklist Pemenuhan Kriteria Responsi
 
 | Kriteria Penugasan | Status | Bukti / Keterangan Implementasi |
 | :--- | :---: | :--- |
@@ -264,8 +244,8 @@ Sesuai ketentuan **Poin 4.3** (*"Video penjelasan kode, bukan demo aplikasi"*), 
 
 ---
 
-## 🔗 8. Tautan Pengumpulan & Referensi
+## 🔗 7. Referensi
 
 - **Repositori GitHub**: [https://github.com/ffakun221-wq/Responsi_PrakPemmob_PaketD.git](https://github.com/ffakun221-wq/Responsi_PrakPemmob_PaketD.git)
-
+- **Link YT** : [https://youtu.be/Nxj3wWwD9XQ](https://youtu.be/Nxj3wWwD9XQ)
 - **Dokumentasi Digi-API**: [https://digi-api.com/](https://digi-api.com/)
