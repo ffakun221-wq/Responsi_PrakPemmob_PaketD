@@ -116,44 +116,6 @@ Aplikasi ini dirancang dengan standar pengembangan Android modern (*Modern Andro
 
 ### E. Arsitektur MVVM (Model - View - ViewModel - Repository)
 
-Pemisahan tanggung jawab (*Separation of Concerns*) diimplementasikan secara ketat:
-
-```mermaid
-flowchart TD
-    subgraph View ["View Layer (Jetpack Compose)"]
-        UI_Home["HomeScreen (LazyVerticalGrid)"]
-        UI_Detail["DetailScreen (LazyColumn)"]
-        UI_Nav["MainActivity (NavHost)"]
-    end
-
-    subgraph ViewModel ["ViewModel Layer"]
-        VM["DigimonViewModel"]
-        StateList["StateFlow<UiState<List<DigimonListItem>>>"]
-        StateDetail["StateFlow<UiState<DigimonDetailResponse>>"]
-    end
-
-    subgraph Repository ["Repository Layer"]
-        Repo["DigimonRepository"]
-    end
-
-    subgraph Network ["Data / Network Layer"]
-        API["DigimonApiService (Retrofit)"]
-        Client["RetrofitClient (Singleton)"]
-        Remote["Digi-API (DAPI Cloud)"]
-    end
-
-    UI_Home -->|collectAsState| StateList
-    UI_Detail -->|collectAsState| StateDetail
-    UI_Home -->|Event: onClick(id)| UI_Nav
-    UI_Nav -->|Navigate: detail/{id}| UI_Detail
-    
-    VM --> StateList
-    VM --> StateDetail
-    VM -->|viewModelScope.launch| Repo
-    Repo -->|suspend fun| API
-    API --> Client
-    Client --> Remote
-```
 
 1. **Model** ([`data/Models.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/Models.kt)): Struktur representasi data mentah dari respon JSON Digi-API.
 2. **Repository** ([`data/DigimonRepository.kt`](app/src/main/java/com/example/aplikasieksplorasidigimon/data/DigimonRepository.kt)): Menjadi *Single Source of Truth* yang mengabstraksi pemanggilan API dari ViewModel menggunakan Kotlin Coroutines `suspend fun`.
@@ -305,5 +267,5 @@ Sesuai ketentuan **Poin 4.3** (*"Video penjelasan kode, bukan demo aplikasi"*), 
 ## 🔗 8. Tautan Pengumpulan & Referensi
 
 - **Repositori GitHub**: [https://github.com/ffakun221-wq/Responsi_PrakPemmob_PaketD.git](https://github.com/ffakun221-wq/Responsi_PrakPemmob_PaketD.git)
-- **Form Pengumpulan**: [https://forms.gle/QRFeEX5NC5WVxoaZA](https://forms.gle/QRFeEX5NC5WVxoaZA) *(Deadline: Jumat, 9 Oktober 13.00 WIB)*
+
 - **Dokumentasi Digi-API**: [https://digi-api.com/](https://digi-api.com/)
